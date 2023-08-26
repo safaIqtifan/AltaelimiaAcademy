@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775774237042",
+    "project_id": "altaelimiaacademy-746fa",
+    "storage_bucket": "altaelimiaacademy-746fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775774237042:android:f250308f5f5f47d14dadeb",
+        "android_client_info": {
+          "package_name": "com.altaelimia.academy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775774237042-rukdfdt61kk10g73tmlha7s4tk7e2vui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxbuOK3ay2sqQTJn5cJIzLtVn-rnk6xhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775774237042-rukdfdt61kk10g73tmlha7s4tk7e2vui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
