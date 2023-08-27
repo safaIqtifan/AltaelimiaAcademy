@@ -23,7 +23,7 @@ public class AppInfoFragment extends Fragment {
         binding = FragmentAppInfoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        MainActivity.webView(root.findViewById(R.id.webView), "https://www.altaelimia.academy/");
+//        MainActivity.webView(root.findViewById(R.id.webView), "https://www.altaelimia.academy/");
 
         return root;
     }

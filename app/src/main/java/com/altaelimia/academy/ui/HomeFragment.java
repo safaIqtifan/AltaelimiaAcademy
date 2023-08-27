@@ -21,6 +21,7 @@ import com.altaelimia.academy.databinding.FragmentHomeBinding;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private String urlWeb = "https://www.altaelimia.academy/";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -29,28 +30,39 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
 //        MainActivity.webView(root.findViewById(R.id.webView), "https://www.altaelimia.academy/");
-
+        String javascript = "javascript:document.getElementsByName('viewport')[0].setAttribute('content', 'initial-scale=1.0,maximum-scale=10.0');";
         binding.webView.getSettings().setJavaScriptEnabled(true);
         binding.webView.getSettings().setLoadWithOverviewMode(true);
         binding.webView.getSettings().setUseWideViewPort(true);
+        binding.webView.loadUrl(urlWeb);
         binding.webView.setWebViewClient(new WebViewClient() {
-
             @Override
             public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-
                 binding.progressBar.setVisibility(View.GONE);
-            }
+                binding.webView.loadUrl(javascript);
 
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
             }
 
         });
+
+
+//        binding.webView.setWebViewClient(new WebViewClient() {
+//z
+//            @Override
+//            public void onPageFinished(WebView view, String url) {
+//                super.onPageFinished(view, url);
+//
+//            }
+//
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//                view.loadUrl(url);
+//                return true;
+//            }
+//
+//        });
 //            webView.getSettings().setJavaScriptEnabled(true);
-        binding.webView.loadUrl("https://www.altaelimia.academy/");
+
 //            webView.getSettings().setBuiltInZoomControls(true);
 //            webView.setInitialScale(120);
 
